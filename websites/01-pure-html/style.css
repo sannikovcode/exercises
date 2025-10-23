@@ -1,0 +1,184 @@
+/* ===== RESET & BASE STYLES ===== */
+/* Сброс стандартных отступов и использование border-box для всех элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Базовые стили для всей страницы */
+body {
+  background: url('ggg.jpg') center/cover no-repeat fixed;
+  min-height: 100vh;
+  font-family: 'Cormorant Garamond', serif;
+  color: white;
+  line-height: 1.6;
+}
+
+/* ===== LAYOUT CONTAINERS ===== */
+/* Основной контейнер с ограничением максимальной ширины */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Боковые колонки */
+.left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 45px;
+  background-color: #09bdbd;
+}
+
+.right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 45px;
+  background-color: #12aaaa;
+}
+
+/* Основная область контента */
+.stuff {
+  margin: 60px 0 0 55px;
+  width: calc(100% - 110px);
+  min-height: 800px;
+  padding: 30px;
+}
+
+/* ===== HEADER & FOOTER ===== */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f82424;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#footer {
+  background-color: #490909;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+/* Заголовки */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Подзаголовки разделов */
+.head {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 0 1rem 0;
+  color: #ffd700; /* Золотой цвет для выделения */
+  text-shadow: 1px 1px 3px black;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 0.5rem;
+}
+
+/* Основной текст */
+p {
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Списки */
+ul {
+  list-style-position: inside;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ===== LINKS & INTERACTIVE ELEMENTS ===== */
+a {
+  color: #ff6b6b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Мобильные устройства */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .left,
+  .right {
+    display: none;
+  }
+  
+  .stuff {
+    width: 100%;
+    margin: 70px 0 0 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Очень маленькие экраны */
+@media only screen and (max-width: 430px) {
+  .stuff {
+    margin-top: 60px;
+    padding: 15px;
+  }
+  
+  .head {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+/* Вспомогательные классы для переиспользования */
+.text-center {
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px black;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
